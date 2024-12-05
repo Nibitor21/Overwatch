@@ -669,7 +669,7 @@ export default defineComponent({
         usr: this.user_id
       };
 
-      axios.get('https://timecatcher.lnbits.de/api/v1/payments', {headers, params})
+      axios.get('https://lnbits.apfelblitz.de/api/v1/payments', {headers, params})
         .then(response => {
           this.transactions = response.data;
           this.incomingtotalamount_final = this.transactions.reduce((acc, transaction) => {
