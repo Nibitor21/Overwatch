@@ -90,3 +90,11 @@ The Overwatch Extension is your all-in-one tool for financial monitoring and rep
 - **Merchants & eCommerce**
 
 - **However, it is also suited for individual users.**
+
+---
+
+## Acknowledgments
+
+LNBits inside! ⚡
+
+A heartfelt thank you to the entire [**LNbits Team**](https://github.com/lnbits) for your incredible work on the outstanding [**LNbits**](https://lnbits.com) project.
