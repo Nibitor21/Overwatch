@@ -36,6 +36,7 @@
                 type="button" no-caps
                 color="primary"
               />
+            </div>
           </q-card-section>
         </div>
       </q-card>
@@ -167,4 +168,3 @@ body {
   text-decoration: none;
 }
 </style>
-
