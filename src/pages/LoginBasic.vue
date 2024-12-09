@@ -37,12 +37,14 @@
                 color="primary"
               />
             </div>
-            <div class="q-mt-md text-center">
-              <p class="text-grey-6">
-                Not registered? 
-                <a href="https://timecatcher.lnbits.de/events/WJLvGZ2UWeGx4SdvGKUZHg" class="custom-link">Create an Account</a>
-              </p>
-            </div>
+            <!--
+<div class="q-mt-md text-center">
+  <p class="text-grey-6">
+    Not registered? 
+    <a href="https://timecatcher.lnbits.de/events/WJLvGZ2UWeGx4SdvGKUZHg" class="custom-link">Create an Account</a>
+  </p>
+</div>
+-->
           </q-card-section>
         </div>
       </q-card>
