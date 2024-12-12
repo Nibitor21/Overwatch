@@ -377,7 +377,7 @@ export default defineComponent({
   name: 'IndexPage',
   data() {
     return {
-      toggle: 'day',
+      toggle: 'month',
       selectedWallet: '',
       transaction_type: 'all_tx',
       show_own_details: false,
