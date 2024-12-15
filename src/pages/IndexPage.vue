@@ -751,7 +751,7 @@ export default defineComponent({
               amount: amount,
               to: "eur"
             };
-            axios.post('https://timecatcher.lnbits.de/api/v1/conversion', data, {headers})
+            axios.post('https://lnbits1.apfelblitz.de/api/v1/conversion', data, {headers})
               .then(response => {
                 callback(response.data.EUR);
               })
@@ -793,7 +793,7 @@ export default defineComponent({
         'Authorization': `Bearer ${this.$store.session.access_token}`,
         "X-Api-Key": this.selectedWallet.adminkey
       }
-      axios.get('https://timecatcher.lnbits.de/api/v1/wallet', {headers})
+      axios.get('https://lnbits1.apfelblitz.de/api/v1/wallet', {headers})
         .then(response => {
           this.balance = response.data.balance / 1000;
           this.convertAmount();
@@ -822,7 +822,7 @@ export default defineComponent({
         cookie_access_token: this.$store.session.access_token
       }
 
-      axios.get('https://timecatcher.lnbits.de/api/v1/wallets', {headers, params})
+      axios.get('https://lnbits1.apfelblitz.de/api/v1/wallets', {headers, params})
         .then(response => {
           this.wallets = response.data;
           this.selectedWallet = this.wallets[0];
