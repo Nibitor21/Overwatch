@@ -39,7 +39,7 @@ The Overwatch SPA is designed to offer users a streamlined and insightful view o
 
 - **Accumulated Balance**: Overwatch gives you an up-to-date overview of your accumulated balance, allowing you to track your financial health over time. This is particularly useful for budgeting and financial planning purposes.
 
-- **Export Tax Reports**: Prepare for tax season without the hassle. Overwatch enables you to export tax reports in CSV format. You have the flexibility to select the time frame for these reports, whether it's a specific month, the entire year, or all your recorded transactions.
+- **Export TX Reports**: Prepare for tax season without the hassle. Overwatch enables you to export tramsaction reports in CSV format.
 
 ---
 
@@ -47,7 +47,7 @@ The Overwatch SPA is designed to offer users a streamlined and insightful view o
 
 1. **Select Report Type**: Reports are available in CSV format for easy use and compatibility.
 2. **Choose Time Frame**: Specify the period for the report you wish to download—select from a specific month, the whole year, or all transactions.
-3. **Download**: Once you've made your selections, simply download the report for your records or tax preparation needs.
+3. **Download**: Once you've made your selections, simply download the report for your records.
 
 ---
 
@@ -90,3 +90,11 @@ The Overwatch Extension is your all-in-one tool for financial monitoring and rep
 - **Merchants & eCommerce**
 
 - **However, it is also suited for individual users.**
+
+---
+
+## Acknowledgments
+
+LNBits inside! ⚡
+
+A heartfelt thank you to the entire [**LNbits Team**](https://github.com/lnbits) for your incredible work on the outstanding [**LNbits**](https://lnbits.com) project.
