@@ -1,5 +1,7 @@
 # A Single-Page Application (SPA) for LNbits that can run in every browser!
 
+[LNbits](https://lnbits.com) inside! ⚡
+
 ## Table of Contents
 
 1. [Introducing Overwatch](#introducing-overwatch)
@@ -94,7 +96,11 @@ The Overwatch Extension is your all-in-one tool for financial monitoring and rep
 ---
 
 ## Acknowledgments
+A heartfelt thank you to the entire [**LNbits Team**](https://github.com/lnbits) for your incredible work on the outstanding [**LNbits**](https://lnbits.com) project. Your contributions make solutions like this possible!
 
-LNBits inside! ⚡
-
-A heartfelt thank you to the entire [**LNbits Team**](https://github.com/lnbits) for your incredible work on the outstanding [**LNbits**](https://lnbits.com) project.
+## Contributing
+I welcome feedback and pull requests! Feel free to submit issues or enhance the app with new features.  
+Licensed under the MIT License.
+### A Note on This Solution
+If you're inspired to take this further, feel free to develop a proper [LNbits](https://lnbits.com) extension! You can find detailed information on creating an extension here:  
+[**LNbits Extensions Wiki**](https://github.com/lnbits/lnbits/wiki/LNbits-Extensions)
