@@ -79,11 +79,11 @@ The Overwatch Extension is your all-in-one tool for financial monitoring and rep
 
 - Visualizing the wallet performance with easy-to-read graphs and pie charts (No Overload - Keep it clean).
 
-- Option to visualize specified products only (Listed products by LNbits TPoS or external pay Plugins for WooCommerce, Shopify, etc.). This would open new information input for products which could perhaps be advertised in a specified timeslot, fulfilling a marketing aspect.
+- Option to visualize/filter specified products only (Listed products by LNbits TPoS or external pay Plugins for WooCommerce, Shopify, etc.). This would open new information input for products which could perhaps be advertised in a specified timeslot, fulfilling a marketing aspect.
 
 - Choice of different user interface colors, which should be user-specific and cached in the browser.
 
-- Add CSV DATEV record structure: [DATEV Developer Platform](https://developer.datev.de/datev/platform/en/dtvf).
+- Add CSV DATEV record structure for Export: [DATEV Developer Platform](https://developer.datev.de/datev/platform/en/dtvf).
 
 ---
 
