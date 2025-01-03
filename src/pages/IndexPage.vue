@@ -146,6 +146,7 @@
               </q-card-section>
               <q-card-section class="text-h4 text-weight-bolder q-pt-none"
                               :class="$q.dark.isActive ? 'dark_text' : 'text-grey-8'">
+
                 <!--                &#163; -->
 
                 <span v-if="balance_toggle">{{ formatSatoshis(balance) }} sats <i
@@ -226,7 +227,6 @@
       </div>
       <div class="col-12 q-mt-sm">
 
-
         <JsonExcel
           :data="transactions"
           :fields="json_fields" class="float-right"
@@ -261,9 +261,10 @@
                  row-key="id"
                  :filter="filter"
         >
+          <!-- Updated body-cell-memo Template -->
           <template v-slot:body-cell-memo="props">
             <q-td :props="props" class="truncate-chip-labels">
-              <q-chip dense :dark="false" class="q-px-sm" color="primary" text-color="white" :label="props.value">
+              <q-chip dense :dark="false" class="q-px-sm whitespace-nowrap" color="primary" text-color="white" :label="props.value">
                 <q-tooltip>
                   {{ props.value }}
                 </q-tooltip>
@@ -275,24 +276,45 @@
                   <q-list dense>
                     <div class="text-body1 text-white q-pa-sm">Comments</div>
                     <q-separator color="white"/>
-                    <q-item clickable v-for="comment in props.row['extra']['comment']" :key="comment.id">
-                      <q-item-section class="text-left text-body2 text-white ellipsis-3-lines">
-                        <div>
-                          <q-avatar size="15px">
-                            <q-icon name="circle"/>
-                          </q-avatar>
-                          {{ comment }}
-                        </div>
-                      </q-item-section>
-                      <q-item-section side>
-                        <q-icon color="white" size="20px" name="content_copy" @click="copyToClipboard(comment)" class="cursor-pointer"/>
-                      </q-item-section>
-                    </q-item>
+                    <!-- Check if comment is an array -->
+                    <div v-if="Array.isArray(props.row['extra']['comment'])">
+                      <q-item clickable v-for="(comment, index) in props.row['extra']['comment']" :key="index">
+                        <q-item-section class="text-left text-body2 text-white ellipsis-3-lines whitespace-nowrap">
+                          <div class="flex items-center">
+                            <q-avatar size="15px">
+                              <q-icon name="circle"/>
+                            </q-avatar>
+                            <span class="ml-2">{{ comment }}</span>
+                          </div>
+                        </q-item-section>
+                        <q-item-section side>
+                          <q-icon color="white" size="20px" name="content_copy" @click="copyToClipboard(comment)" class="cursor-pointer"/>
+                        </q-item-section>
+                      </q-item>
+                    </div>
+                    <!-- If comment is a string -->
+                    <div v-else>
+                      <q-item clickable>
+                        <q-item-section class="text-left text-body2 text-white ellipsis-3-lines whitespace-nowrap">
+                          <div class="flex items-center">
+                            <q-avatar size="15px">
+                              <q-icon name="circle"/>
+                            </q-avatar>
+                            <span class="ml-2">{{ props.row['extra']['comment'] }}</span>
+                          </div>
+                        </q-item-section>
+                        <q-item-section side>
+                          <q-icon color="white" size="20px" name="content_copy" @click="copyToClipboard(props.row['extra']['comment'])" class="cursor-pointer"/>
+                        </q-item-section>
+                      </q-item>
+                    </div>
                   </q-list>
                 </q-menu>
               </q-btn>
             </q-td>
           </template>
+          <!-- End of Updated Template -->
+
           <template v-slot:body-cell-amount_sats="props">
             <q-td :props="props">
               <q-icon v-if="props.row['amount'] > 0" name="call_received" color="positive"/>
@@ -834,7 +856,6 @@ export default defineComponent({
           console.error("There was an error fetching the transactions!", error);
         });
 
-
     },
     exportTable() {
       const content = [this.columns.map(col => wrapCsvValue(col.label))].concat(
@@ -1069,5 +1090,17 @@ export default defineComponent({
 
 .truncate-chip-labels > .q-chip {
   max-width: 300px
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.ml-2 {
+  margin-left: 0.5rem;
 }
 </style>
